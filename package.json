@@ -1,0 +1,64 @@
+{
+  "name": "webpack-boilerplate",
+  "version": "1.0.0",
+  "description": "Webpack Boilerplate for HTML, CSS, and JavaScript Projects",
+  "main": "src/js/index.js",
+  "scripts": {
+    "lint": "jshint ./src/js/ --show-non-errors --extra-ext .mjs",
+    "test": "npm run lint",
+    "build:dev": "webpack --progress --mode development",
+    "build:prod": "webpack --mode production",
+    "serve:dev": "webpack-dev-server --mode development",
+    "serve:prod": "http-server -o /docs/ --silent",
+    "start:dev": "npm run build:dev && npm run serve:dev",
+    "start:prod": "npm run build:prod && npm run serve:prod",
+    "start": "npm run start:dev --silent"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benmcnulty/webpack-boilerplate.git"
+  },
+  "private": true,
+  "jshintConfig": {
+    "node": true,
+    "browser": true,
+    "esversion": 6,
+    "undef": true,
+    "unused": true,
+    "trailingcomma": true
+  },
+  "keywords": [
+    "webpack",
+    "html",
+    "lodash",
+    "css",
+    "sass",
+    "javascript",
+    "es6"
+  ],
+  "author": "Ben McNulty",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benmcnulty/webpack-boilerplate/issues"
+  },
+  "homepage": "https://github.com/benmcnulty/webpack-boilerplate#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.4.1",
+    "html-webpack-plugin": "^3.2.0",
+    "jshint": "^2.11.0-rc1",
+    "mini-css-extract-plugin": "^0.9.0",
+    "sass": "^1.24.3",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.1.2",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  },
+  "dependencies": {
+    "http-server": "^0.12.0"
+  }
+}
