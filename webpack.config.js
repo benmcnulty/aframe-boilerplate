@@ -7,7 +7,7 @@ module.exports = {
     entry: './src/js/index.js',
     output: {
         filename: './js/[name].bundle.js',
-        path: path.resolve(__dirname, 'docs')
+        path: path.resolve(__dirname, 'docs'),
     },
     stats: 'errors-only',
     devServer: {
@@ -48,9 +48,10 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            title: "Webpack Boilerplate",
+            inject: 'head',
+            title: "A-Frame with Webpack Boilerplate",
             template: './src/html/index.inc',
-            description: "Boilerplate for HTML, CSS, and JS Projects built with Lodash, Sass, and ES6",
+            description: "Boilerplate for A-Frame Projects Bundled with Webpack",
             color: "#c0c0c0",
         }),
         new MiniCssExtractPlugin({
