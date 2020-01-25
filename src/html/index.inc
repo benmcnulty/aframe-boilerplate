@@ -8,13 +8,13 @@
     <meta name="theme-color" content="<%= htmlWebpackPlugin.options.color %>">
     <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
-    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.1/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v6.1.0/dist/aframe-extras.min.js"></script>
 </head>
 <body>
 <!--[if IE]>
     <p>You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 <![endif]-->
-<a-scene background="color: #00b140" physics="debug: true">
+<a-scene background="color: #00b140" physics="debug: false">
     <a-assets>
 
     </a-assets>
