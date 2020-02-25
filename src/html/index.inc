@@ -4,9 +4,7 @@
     <meta charset="utf-8">
     <title><%= htmlWebpackPlugin.options.title %></title>
     <meta name="description" content="<%= htmlWebpackPlugin.options.description %>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="<%= htmlWebpackPlugin.options.color %>">
-    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v6.1.0/dist/aframe-extras.min.js"></script>
 </head>
@@ -28,8 +26,8 @@
     <a-entity id="rig" movement-controls="constrainToNavMesh: true; speed: 0.200;">
         <a-entity camera="far: 100;" position="0 1.6 0" 
         look-controls="pointerLockEnabled: true"></a-entity>
-        <a-entity body="type: static; shape: sphere; sphereRadius: 0.04;" hand-controls="left" sphere-collider="objects: .throwable" grab></a-entity>
-        <a-entity body="type: static; shape: sphere; sphereRadius: 0.04;" hand-controls="right" sphere-collider="objects: .throwable" grab></a-entity>
+        <a-entity body="type: static; shape: sphere; sphereRadius: 0.04;" hand-controls="hand: left" sphere-collider="objects: .throwable" grab></a-entity>
+        <a-entity body="type: static; shape: sphere; sphereRadius: 0.04;" hand-controls="hand: right" sphere-collider="objects: .throwable" grab></a-entity>
     </a-entity>
 </a-scene>
 </body>
