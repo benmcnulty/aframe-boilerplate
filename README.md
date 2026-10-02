@@ -1,5 +1,26 @@
 # aframe-boilerplate
 ## Webpack Boilerplate for A-Frame Projects
+
+## Historical starter status
+
+This is a historical A-Frame/Webpack 4 starter, not a modern XR compatibility
+baseline. The template loads A-Frame 1.0.4 plus physics/extras scripts from
+external URLs; those URLs and headset support have not been freshly verified.
+[`src/js/components.js`](src/js/components.js) registers an empty example `foo`
+component, while [`src/html/index.inc`](src/html/index.inc) supplies the scene.
+
+The committed lockfile supports an original `npm ci` installation attempt.
+`npm test` delegates to JSHint and does not test scene behavior. Builds clean/write
+`docs/`; preserve unrelated work there before running them. No runtime environment
+variables or CI workflow are configured. Current Node/build/browser compatibility
+remains unverified in this documentation review.
+
+To inspect the already committed scene with Python 3, run
+`python -m http.server 8000 --bind 127.0.0.1 --directory docs` and open
+`http://127.0.0.1:8000`. Stop with Ctrl+C. That previews the tracked build rather
+than proving source/build parity. The original tutorial and commands below are
+preserved; see [LICENSE](LICENSE) for MIT terms and retain upstream script credits.
+
 ---
   
 Clone this repository for a default A-Frame development environment.  
@@ -45,7 +66,7 @@ npm install && npm start
 ### Build Notes
 * Development environment clears [docs](/docs/) folder and serves bundle from memory with live-reloading.
 * Production builds to [docs](/docs/) folder for publishing to GitHub Pages and locally serves a transpiled, concatenated, minified bundle.
-* Default production build is public on GitHub Pages: [A-Frame with Webpack Boilerplate](https://benmcnulty.github.io/aframe-boilerplate/)
+* Historical GitHub Pages link (current availability unverified): [A-Frame with Webpack Boilerplate](https://benmcnulty.github.io/aframe-boilerplate/)
   
 ### NPM Scripts
 #### Install Node Packages
